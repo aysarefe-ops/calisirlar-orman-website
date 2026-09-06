@@ -1,0 +1,35 @@
+# Dependencies
+/node_modules/
+
+# Next.js and generated output
+/.next/
+/out/
+/dist/
+/build/
+/coverage/
+
+# Vercel local project data
+/.vercel/
+
+# Environment files; the template is safe to commit
+.env
+.env.*
+!.env.example
+
+# Local-only archives and source-generation workspaces
+/outputs/
+/work/
+/assets/
+/public/reference-images/
+
+# Generated TypeScript files
+*.tsbuildinfo
+next-env.d.ts
+
+# Logs and operating-system files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
