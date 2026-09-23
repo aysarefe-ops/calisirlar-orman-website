@@ -13,7 +13,7 @@ export type MaterialImages = {
 };
 
 export type MaterialVisualization = {
-  scene: "master-room-v1" | "master-room-v2";
+  scene: "master-room-v1" | "master-room-v2" | "natural-office-v1";
   image?: string;
   status: "pending" | "generated" | "review" | "approved";
   colorQa?: "PASS" | "REVIEW" | "FAIL";

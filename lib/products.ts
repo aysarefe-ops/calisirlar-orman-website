@@ -26,10 +26,41 @@ const industrialRows = [
 
 const visualizationProducts = new Set(["akcaagac", "usa-ceviz", "wengue", "a1-ince-dar-mese", "a11-wenge"]);
 
+const naturalOfficeApplications: Record<string, string> = {
+  afromosia: "afromosia-room.jpg",
+  anigre: "anigre-room.jpg",
+  anzem: "anzem-room.jpg",
+  ayous: "ayous-room.jpg",
+  bamboo: "bamboo-room.jpg",
+  cam: "cam-room.jpg",
+  disbudak: "disbudak-room.jpg",
+  "dogal-pelesenk": "dogal-pelesenk-room.jpg",
+  "dogal-teak": "dogal-teak-room.jpg",
+  "figurlu-ceviz": "figurlu-ceviz-room.jpg",
+  "freze-mese": "freze-mese-room.jpg",
+  "freze-ovenkol": "freze-ovenkol-room.jpg",
+  "freze-usa-ceviz": "freze-usa-ceviz-room.jpg",
+  gul: "gul-room.jpg",
+  "hareli-mese": "hareli-mese-room.jpg",
+  "hareli-ovenkol": "hareli-ovenkol-room.jpg",
+  irako: "irako-room.jpg",
+  kestane: "kestane-room.jpg",
+  kiraz: "kiraz-room.jpg",
+  "light-abanoz": "light-abanoz-room.jpg",
+  pamela: "pamela-room.jpg",
+  "saten-ceviz": "saten-ceviz-room.jpg",
+  zebrano: "zebrano-room.jpg",
+};
+
 function materialAssets(category: "natural" | "industrial", slug: string, sourceImage: string) {
   const root = `/materials/${category}/${slug}`;
   const isPoc = visualizationProducts.has(slug);
-  const application = isPoc ? `/images/applications/master-room-v2/${slug}-room.webp` : undefined;
+  const naturalOfficeFile = category === "natural" ? naturalOfficeApplications[slug] : undefined;
+  const application = naturalOfficeFile
+    ? `/images/applications/natural-office-v1/${naturalOfficeFile}`
+    : isPoc
+      ? `/images/applications/master-room-v2/${slug}-room.webp`
+      : undefined;
   return {
     image: `${root}/catalog.webp`,
     images: {
@@ -41,10 +72,10 @@ function materialAssets(category: "natural" | "industrial", slug: string, source
       application,
     },
     visualization: {
-      scene: isPoc ? "master-room-v2" as const : "master-room-v1" as const,
+      scene: naturalOfficeFile ? "natural-office-v1" as const : isPoc ? "master-room-v2" as const : "master-room-v1" as const,
       image: application,
-      status: application ? "review" as const : "pending" as const,
-      colorQa: application ? "PASS" as const : undefined,
+      status: naturalOfficeFile ? "approved" as const : application ? "review" as const : "pending" as const,
+      colorQa: application && !naturalOfficeFile ? "PASS" as const : undefined,
     },
   };
 }

@@ -328,6 +328,12 @@ footer { padding-top:clamp(120px,14vw,210px); }
 .product-detail-copy h1 { font-family:var(--display); font-size:clamp(78px,8vw,125px); line-height:.79; }
 .product-detail-copy p { max-width:470px; font-size:14px; }
 .product-detail-copy .button { background:none; color:var(--charcoal); padding:0 0 11px; border-bottom:1px solid currentColor; min-height:auto; border-radius:0; }
+.product-application { padding:clamp(110px,14vw,210px) clamp(22px,6vw,100px); background:var(--forest); color:var(--ivory); }
+.product-application-copy { max-width:1600px; margin:0 auto clamp(55px,7vw,105px); display:grid; grid-template-columns:repeat(12,1fr); gap:16px; }
+.product-application-copy .eyebrow { grid-column:1/4; color:rgba(248,246,241,.66); }
+.product-application-copy h2 { grid-column:4/12; margin:0; font:400 clamp(58px,7vw,108px)/.88 var(--display); letter-spacing:-.055em; }
+.product-application-image { position:relative; width:min(88vw,1500px); aspect-ratio:1; margin:0 auto; overflow:hidden; background:#242722; }
+.product-application-image img { object-fit:cover; }
 .related { padding-top:clamp(140px,15vw,220px); padding-bottom:clamp(140px,15vw,220px); }
 
 .editorial { padding-top:clamp(140px,15vw,230px); padding-bottom:clamp(140px,15vw,230px); }
@@ -349,7 +355,7 @@ footer { padding-top:clamp(120px,14vw,210px); }
   .industrial-artbook{padding-block:120px}.industrial-artbook header{display:block;margin-bottom:75px}.industrial-artbook header h2{margin-top:55px;font-size:53px}.industrial-triptych{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-22px;padding-inline:22px;gap:10px}.industrial-triptych a{min-width:82vw;scroll-snap-align:start}.industrial-triptych a>div{height:112vw;max-height:none}.industrial-code{font-size:80px}
   .surface-system-editorial{min-height:720px}.surface-system-copy{bottom:70px}.surface-system-copy h2{font-size:58px;line-height:.86}.film-editorial{padding-block:130px}.film-copy h2{font-size:50px}.film-poster{min-height:70svh}.film-play{width:76px;height:76px}
   .talk-material{min-height:80svh;display:block;padding-block:140px}.talk-material h2{font-size:16.5vw;line-height:.77;margin:80px 0}.talk-material .line-link{margin-left:auto}.footer-statement{display:block}.footer-statement h2{margin-top:60px;font-size:20vw}
-  .page-hero{min-height:68svh;padding-inline:20px}.page-hero h1{font-size:64px;line-height:.83}.page-hero p{margin-left:18%;font-size:13px}.product-grid{grid-template-columns:repeat(2,1fr);gap:45px 8px}.product-card:nth-child(n){margin-top:0}.product-card:nth-child(even){margin-top:55px}.product-meta h3{font-size:20px}.product-detail-main{padding-inline:0}.product-detail-copy{padding-inline:20px}.product-detail-image{min-height:70svh}.product-detail-copy h1{font-size:69px}.cards-3{display:block}.info-card+.info-card{padding-left:0;border-left:0}
+  .page-hero{min-height:68svh;padding-inline:20px}.page-hero h1{font-size:64px;line-height:.83}.page-hero p{margin-left:18%;font-size:13px}.product-grid{grid-template-columns:repeat(2,1fr);gap:45px 8px}.product-card:nth-child(n){margin-top:0}.product-card:nth-child(even){margin-top:55px}.product-meta h3{font-size:20px}.product-detail-main{padding-inline:0}.product-detail-copy{padding-inline:20px}.product-detail-image{min-height:70svh}.product-detail-copy h1{font-size:69px}.product-application{padding:100px 20px}.product-application-copy{display:block;margin-bottom:55px}.product-application-copy h2{margin-top:42px;font-size:54px}.product-application-image{width:100%}.cards-3{display:block}.info-card+.info-card{padding-left:0;border-left:0}
 }
 
 /* Digital wood material library */
