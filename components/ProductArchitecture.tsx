@@ -10,7 +10,7 @@ import { ContactCta } from "./Footer";
 export function ProductLanding({ locale }: { locale: Locale }) {
   const tr=locale==="tr";
   return <main className="product-architecture">
-    <section className="page-hero product-landing-hero"><div className="page-hero-content"><span className="eyebrow">{tr?"ÜRÜNLER / YÜZEY SİSTEMLERİ":"PRODUCTS / SURFACE SYSTEMS"}</span><h1>{tr?"Projeniz için doğru yüzey, tek bir koleksiyonda.":"The right surface for your project, in one collection."}</h1><p>{tr?"Doğal karakterden kontrollü endüstriyel yüzeylere; kaplamalı panelden tamamlayıcı kenar detaylarına uzanan bütüncül ürün sistemi.":"A coordinated product system spanning natural character, controlled industrial surfaces, veneered panels and finishing edge details."}</p></div></section>
+    <section className="page-hero product-landing-hero"><div className="page-hero-content"><span className="eyebrow">{tr?"ÜRÜNLER":"PRODUCTS"}</span><h1>{tr?"Kaplama, panel ve kenar bandı ürünleri.":"Veneer, panel and edge band products."}</h1><p>{tr?"Doğal ve endüstriyel kaplamalar, kaplamalı MDF ve sunta ile ahşap kenar bandı seçeneklerini inceleyin.":"Explore natural and industrial veneers, veneered MDF and chipboard, and wood edge band options."}</p></div></section>
     <section className="product-family-index">
       {productCategories.map((category,index)=><Link className={`product-family family-${index+1}`} href={productCategoryPath(locale,category.id)} key={category.id}>
         <div className="product-family-image"><Image src={category.image} alt={`${category.name[locale]} ${tr?"malzeme görünümü":"material view"}`} fill sizes={index<2?"60vw":"55vw"}/></div>

@@ -13,28 +13,28 @@ export const copy = {
   tr: {
     nav: { company: "Kurumsal", products: "Ürünler", production: "Üretim", gallery: "Galeri", documents: "Belgeler", contact: "İletişim" },
     heroEyebrow: "ÇALIŞIRLAR ORMAN ÜRÜNLERİ · 1993'TEN BERİ",
-    heroTitle: "Seçkin yüzeyler. Güvenilir üretim.",
+    heroTitle: "Doğal ve endüstriyel kaplama çözümleri.",
     heroText: "Mimari ve mobilya projeleri için doğal ve endüstriyel kaplamalar, kaplamalı panel ve tamamlayıcı kenar çözümleri.",
     explore: "Koleksiyonu inceleyin", company: "Kurumsal", material: "Yüzeyleri inceleyin", all: "Tüm koleksiyonu görün",
-    introTitle: "Malzeme bilgisi, üretim disiplini ve projeye özel çözüm yaklaşımı.",
-    introText: "Çalışırlar, 1993'ten bu yana ahşap yüzey deneyimini geniş bir malzeme kütüphanesi ve kontrollü üretim kabiliyetiyle birleştiriyor. Torbalı'daki tesiste doğal ve endüstriyel kaplamalı panel çözümleri üretiliyor.",
-    categories: "Yüzey sistemleri", categoriesText: "Doğal karakterden tekrarlanabilir endüstriyel yüzeylere, panelden tamamlayıcı kenar detaylarına uzanan bütüncül koleksiyon.",
-    facility: "Malzemeyi standarda dönüştüren üretim.", facilityText: "Torbalı, İzmir'deki yaklaşık 11.000 m² üretim tesisi; yüzey seçimi, panel hazırlığı, kaplama uygulaması ve uzman süreç kontrolünü aynı çatı altında yönetir.",
+    introTitle: "Kaplama, panel ve kenar bandı çözümleri.",
+    introText: "Çalışırlar, 1993'ten beri doğal ve endüstriyel kaplamalar sunuyor. Torbalı'daki tesiste projeye göre kaplamalı MDF ve sunta üretimi yapılıyor.",
+    categories: "Ürün grupları", categoriesText: "Doğal ve endüstriyel kaplamalar, kaplamalı MDF ve sunta ile ahşap kenar bantları.",
+    facility: "11.000 m² üretim tesisi.", facilityText: "Torbalı, İzmir'deki üretim tesisi; yüzey seçimi, panel hazırlığı, kaplama uygulaması ve süreç kontrolünü aynı çatı altında yürütür.",
     quality: "Tutarlı sonuç için kontrollü süreç", qualityText: "Kalite yaklaşımımız; doğru malzeme seçimi, süreç boyunca uzman denetimi ve projeye uygun çözüm geliştirme üzerine kuruludur.",
-    contactCta: "Projeniz için yüzey seçimini birlikte netleştirelim.", contactAction: "Projenizi paylaşın"
+    contactCta: "Numune, ürün bilgisi ve proje talepleriniz için iletişime geçin.", contactAction: "Talep oluşturun"
   },
   en: {
     nav: { company: "Company", products: "Products", production: "Production", gallery: "Gallery", documents: "Documents", contact: "Contact" },
     heroEyebrow: "ÇALIŞIRLAR WOOD PRODUCTS · SINCE 1993",
-    heroTitle: "Distinctive surfaces. Reliable production.",
-    heroText: "Natural and industrial veneers, veneered panels and coordinated edge solutions for architecture and furniture projects.",
+    heroTitle: "Natural and industrial veneer solutions.",
+    heroText: "Natural and industrial veneers, veneered panels and wood edge bands for architecture and furniture projects.",
     explore: "Explore the collection", company: "Our company", material: "Explore surfaces", all: "View the full collection",
-    introTitle: "Material knowledge, production discipline and a project-led approach.",
-    introText: "Since 1993, Çalışırlar has combined wood-surface expertise with a broad material library and controlled production capability. Natural and industrial veneered panel solutions are produced at the Torbalı facility.",
-    categories: "Surface systems", categoriesText: "A coordinated collection spanning natural character, repeatable industrial surfaces, panels and finishing edge details.",
-    facility: "Production that turns material into consistency.", facilityText: "The approximately 11,000 m² Torbalı facility manages surface selection, panel preparation, veneering and expert process control under one roof.",
+    introTitle: "Veneer, panel and edge band solutions.",
+    introText: "Çalışırlar has supplied natural and industrial veneers since 1993. Veneered MDF and chipboard are produced to project requirements at the Torbalı facility.",
+    categories: "Product groups", categoriesText: "Natural and industrial veneers, veneered MDF and chipboard, and wood edge bands.",
+    facility: "11,000 m² production facility.", facilityText: "The Torbalı facility manages surface selection, panel preparation, veneering and process control under one roof.",
     quality: "Controlled processes, consistent outcomes", qualityText: "Our approach to quality is built on the right material selection, expert oversight throughout production and solutions tailored to project needs.",
-    contactCta: "Let’s define the right surface selection for your project.", contactAction: "Discuss your project"
+    contactCta: "Contact us for samples, product information and project enquiries.", contactAction: "Send an enquiry"
   }
 } as const;
 

@@ -33,9 +33,9 @@ export function MovingHero({ locale, productPath, contactPath }: { locale: Local
     <div className="moving-hero-meta"><span>PRODUCTION / SURFACES</span><span>TORBALI · İZMİR</span><span>SINCE 1993</span></div>
     <div className="moving-hero-copy">
       <span className="hero-kicker">{tr ? "TORBALI'DAN PROJEYE · KONTROLLÜ ÜRETİM" : "FROM TORBALI TO THE PROJECT · CONTROLLED PRODUCTION"}</span>
-      <h1>{tr ? <>Ahşabın karakteri.<br/><em>Üretimin disiplini.</em></> : <>The character of wood.<br/><em>The discipline of production.</em></>}</h1>
-      <p className="hero-lede">{tr ? "Seçkin kaplamalar, projeye özel panel çözümleri ve aynı standardı koruyan üretim gücü." : "Selected veneers, project-specific panel solutions and production capability built around consistent standards."}</p>
-      <div className="hero-conversion-actions"><Link className="hero-primary" href={productPath}>{tr ? "Koleksiyonu inceleyin" : "Explore the collection"}<Arrow/></Link><Link className="line-link light" href={contactPath}>{tr ? "Projenizi paylaşın" : "Discuss your project"}<Arrow/></Link></div>
+      <h1>{tr ? <>Doğal ve endüstriyel<br/><em>kaplama çözümleri.</em></> : <>Natural and industrial<br/><em>veneer solutions.</em></>}</h1>
+      <p className="hero-lede">{tr ? "Kaplama, kaplamalı MDF ve sunta ile ahşap kenar bandı üretimi. Numune, teknik bilgi ve proje desteği." : "Veneers, veneered MDF and chipboard, and wood edge band production. Samples, technical information and project support."}</p>
+      <div className="hero-conversion-actions"><Link className="hero-primary" href={productPath}>{tr ? "Ürünleri inceleyin" : "View products"}<Arrow/></Link><Link className="line-link light" href={contactPath}>{tr ? "Proje talebi oluşturun" : "Start a project enquiry"}<Arrow/></Link></div>
     </div>
     <button type="button" className="hero-motion-control" aria-pressed={isPaused} onClick={() => setPaused(!paused)} disabled={Boolean(reducedMotion)}>
       <span aria-hidden="true">{isPaused ? "▶" : "Ⅱ"}</span>{isPaused ? (tr ? "HAREKETİ BAŞLAT" : "PLAY MOTION") : (tr ? "HAREKETİ DURDUR" : "PAUSE MOTION")}
