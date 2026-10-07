@@ -23,7 +23,7 @@ const redirects: NonNullable<NextConfig["redirects"]> = async () => [
 ];
 
 const nextConfig: NextConfig = {
-  images: { formats: ["image/avif", "image/webp"] },
+  images: { formats: ["image/avif", "image/webp"], qualities: [75, 90] },
   redirects,
 };
 
