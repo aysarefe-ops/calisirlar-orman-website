@@ -25,7 +25,7 @@ export function VeneerCategoryPage({ locale, categoryId }: { locale: Locale; cat
   const tr=locale==="tr";
   const category=getProductCategory(categoryId);
   return <main>
-    <section className="page-hero has-image category-hero"><Image src={category.image} alt="" fill priority sizes="100vw"/><div className="page-hero-content"><div className="breadcrumbs"><Link href={getPath(locale,"home")}>{tr?"Ana Sayfa":"Home"}</Link> / <Link href={getPath(locale,"products")}>{tr?"Ürünler":"Products"}</Link> / {category.name[locale]}</div><span className="eyebrow">{category.order} / {tr?"MALZEME AİLESİ":"MATERIAL FAMILY"}</span><h1>{category.name[locale]}</h1><p>{category.description[locale]}</p></div></section>
+    <section className="page-hero has-image category-hero"><Image src={category.image} alt="" fill loading="eager" sizes="100vw"/><div className="page-hero-content"><div className="breadcrumbs"><Link href={getPath(locale,"home")}>{tr?"Ana Sayfa":"Home"}</Link> / <Link href={getPath(locale,"products")}>{tr?"Ürünler":"Products"}</Link> / {category.name[locale]}</div><span className="eyebrow">{category.order} / {tr?"MALZEME AİLESİ":"MATERIAL FAMILY"}</span><h1>{category.name[locale]}</h1><p>{category.description[locale]}</p></div></section>
     <ProductExplorer locale={locale} productCategory={categoryId}/>
     <ContactCta locale={locale}/>
   </main>;
