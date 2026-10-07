@@ -117,7 +117,7 @@
 .product-card:active { transform:scale(.995); }
 
 footer { position:relative; overflow:hidden; }
-footer::before { content:""; position:absolute; top:0; right:clamp(20px,5vw,80px); width:clamp(34px,4vw,64px); height:100%; background:url("/materials/industrial/a11-wenge/catalog.webp") center/cover; opacity:.28; }
+footer::before { content:""; position:absolute; top:0; right:clamp(20px,5vw,80px); width:clamp(34px,4vw,64px); height:100%; background:url("/materials/industrial/cls-16-wenge/catalog.jpg") center/cover; opacity:.28; }
 
 @media(max-width:1050px){
   .unique-surface{grid-template-columns:1.15fr .85fr}.unique-surface-copy{padding:65px 38px}.unique-surface-copy p{margin-left:0}

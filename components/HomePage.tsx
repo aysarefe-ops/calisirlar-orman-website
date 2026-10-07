@@ -14,11 +14,11 @@ export function HomePage({ locale }: { locale: Locale }) {
   const tr = locale === "tr";
   const productPath = getPath(locale, "products");
   const bySlug = (slug: string) => products.find((product) => product.slug === slug)!;
-  const selectedProducts = ["usa-ceviz","dogal-teak","a3-hareli-mese","a11-wenge"].map(bySlug);
-  const scrollProducts = ["akcaagac","usa-ceviz","zebrano","dogal-teak","a1-ince-dar-mese","a3-hareli-mese","a11-wenge"].map(bySlug);
+  const selectedProducts = ["usa-ceviz","dogal-teak","cls-03-hareli-mese","cls-16-wenge"].map(bySlug);
+  const scrollProducts = ["akcaagac","usa-ceviz","zebrano","dogal-teak","cls-01-ince-freze-mese","cls-03-hareli-mese","cls-16-wenge"].map(bySlug);
   const collection = [
     { title: tr ? "Doğal Kaplamalar" : "Natural Veneers", label: "01 / NATURAL VENEER", image: bySlug("usa-ceviz").images.catalogue, href: productCategoryPath(locale,"natural-veneer") },
-    { title: tr ? "Endüstriyel Kaplamalar" : "Industrial Veneers", label: "02 / INDUSTRIAL VENEER", image: bySlug("a11-wenge").images.catalogue, href: productCategoryPath(locale,"industrial-veneer") },
+    { title: tr ? "Endüstriyel Kaplamalar" : "Industrial Veneers", label: "02 / INDUSTRIAL VENEER", image: bySlug("cls-16-wenge").images.catalogue, href: productCategoryPath(locale,"industrial-veneer") },
     { title: tr ? "Kaplamalı MDF & Sunta" : "Veneered MDF & Chipboard", label: "03 / PANELS", image: "/images/editorial/campaign/panels/full-size-veneered-panels-desktop.webp", href: productCategoryPath(locale,"veneered-mdf-chipboard") },
     { title: tr ? "Ahşap Kenar Bantları" : "Wood Edge Bands", label: "04 / EDGE DETAIL", image: "/images/editorial/campaign/edge-band/edge-band-loops-desktop.webp", href: productCategoryPath(locale,"wood-edge-band") }
   ];
@@ -27,15 +27,15 @@ export function HomePage({ locale }: { locale: Locale }) {
     { src:bySlug("usa-ceviz").images.catalogue, alt:tr?"Amerikan ceviz kaplama":"USA walnut veneer", label:"WALNUT / 02", width:"wide" },
     { src:bySlug("zebrano").images.catalogue, alt:"Zebrano", label:"ZEBRANO / 03", width:"regular" },
     { src:bySlug("dogal-teak").images.catalogue, alt:tr?"Doğal teak kaplama":"Natural teak veneer", label:"TEAK / 04", width:"narrow" },
-    { src:bySlug("a1-ince-dar-mese").images.catalogue, alt:tr?"A1 endüstriyel kaplama":"A1 industrial veneer", label:"INDUSTRIAL / A1", width:"wide" },
-    { src:bySlug("a11-wenge").images.catalogue, alt:tr?"A11 endüstriyel kaplama":"A11 industrial veneer", label:"INDUSTRIAL / A11", width:"regular" },
+    { src:bySlug("cls-01-ince-freze-mese").images.catalogue, alt:tr?"CLS-01 endüstriyel kaplama":"CLS-01 industrial veneer", label:"INDUSTRIAL / CLS-01", width:"wide" },
+    { src:bySlug("cls-16-wenge").images.catalogue, alt:tr?"CLS-16 endüstriyel kaplama":"CLS-16 industrial veneer", label:"INDUSTRIAL / CLS-16", width:"regular" },
   ];
   const architectureArchive: MarqueeImage[] = [
     { src:"/images/editorial/campaign/architecture/walnut-living-wall-desktop.webp", alt:tr?"Ceviz kaplamalı duvar uygulaması":"Walnut-clad wall application", label:"ARCHITECTURE / 01", width:"wide" },
     { src:"/images/editorial/campaign/architecture/light-oak-meeting-room-desktop.webp", alt:tr?"Açık meşe toplantı mekânı":"Light oak meeting space", label:"ARCHITECTURE / 02", width:"wide" },
     { src:"/images/editorial/campaign/architecture/walnut-reception-desktop.webp", alt:tr?"Ceviz resepsiyon uygulaması":"Walnut reception application", label:"ARCHITECTURE / 03", width:"wide" },
     { src:bySlug("akcaagac").images.application!, alt:tr?"Akçaağaç mekân görselleştirmesi":"Maple room visualization", label:"ROOM V2 / MAPLE", width:"wide" },
-    { src:bySlug("a11-wenge").images.application!, alt:tr?"A11 mekân görselleştirmesi":"A11 room visualization", label:"ROOM V2 / A11", width:"wide" },
+    { src:bySlug("freze-mese").images.application!, alt:tr?"Freze meşe mekân görselleştirmesi":"Rift oak room visualization", label:"ROOM / RIFT OAK", width:"wide" },
   ];
 
   return <main className="premium-home motion-home">

@@ -21,10 +21,49 @@ const exoticRows = [
 ] as const;
 
 const industrialRows = [
-  ["A1","Thin Narrow Oak","a1-ince-dar-mese","A1_incedamarmese.jpg"],["A2","Thick Narrow Oak","a2-kalin-dar-mese","A2_kalindamarmese.jpg"],["A3","Crown Oak","a3-hareli-mese","a3_harelimese.jpg"],["A4","Teak","a4-teak","a4_teak.jpg"],["A5","Light Teak","a5-acik-teak","a5_acikteak.jpg"],["A6","Crown Teak","a6-hareli-teak","a6_hareli_teak.jpg"],["A7","Zeytin","a7-zeytin","a7_zeytin.jpg"],["A8","Walnut","a8-ceviz","a8_ceviz.jpg"],["A9","Thin Line Walnut","a9-ince-cizgili-ceviz","a9_ince_cizgili_ceviz.jpg"],["A10","Wengue","a10-wenge","a10_wenge.jpg"],["A11","Ebony","a11-wenge","a11_wenge.jpg"],["A12","Black Ebony","a12-siyah-abanoz","a12_siyah_abanz.jpg"],["A13","Crown Ebony","a13-hareli-abanoz","a13_hareli_abanoz.jpg"],["A14","New Exotic","a14-yeni-egzotik","a14_yeni_egzotik.jpg"],["A15","Milling Rosewood","a15-freze-peleseng","a15_freze_pleseng.jpg"],["A16","Crown Rosewood","a16-hareli-peleseng","a16_harelipeleseng.jpg"],["A17","Crown Walnut","a17-hareli-duz","a17_hareliduz.jpg"],["A18","Sapelli","a18-sapelli","a18_sapelli.jpg"],["A19","Black","a19-siyah","a19_siyah.jpg"],["A20","Dark Teak","a20-koyu-teak","a20_koyuteak.jpg"],["A21","Aniegre","a21-anigre","a21_anigre.jpg"],["A22","Fraise Santos","a22-freze-santos","a22_frezesantos.jpg"],["A25","Milling Teak Extra","a25-freze-teak-ekstra","a25_frezeteakekstra.jpg"],["A26","Walnut Extra","a26-ceviz-ekstra","a26_cevizekstra.jpg"],["A27","Purple Rosewood","a27-mor-peleseng","a27_morpeleseng.jpg"],["A28","Milling Cherry","a28-freze-kiraz","a28_frezekiraz.jpg"],["A29","Crown Cherry","a29-hareli-kiraz","a29_harelikiraz.jpg"],["A30","Lime Milling Oak","a30-kirecli-freze-mese","a30_kireclifrezemese.jpg"],["A31","Lime Crown Oak","a31-kirecli-hareli-mese","a31_kirecliharelimese.jpg"],["C4","Lime Oak","c4-kirecli-mese","c4_kireclimese.jpg"],["C7","Milling Teak","c7-freze-teak","c7_frezeteak.jpg"],["C13","Walnut","c13-ceviz","c13_ceviz.jpg"],["C15","Exotic Brown","c15-egzotik-kahve","c15_egzotikkahve.jpg"],["C16","Exotic Black","c16-egzotik-siyah","c16_egzotiksiyah.jpg"],["C18","Alligator Pear","c18-avakado","c18_avakado.jpg"],["C22","Ebony Burl","c22-abanoz-kok","c22_abanozkok.jpg"],["C24","Burl","c24-kok","c24_kok.jpg"],["C28","Dark Burl","c28-koyu-kok","c28_koyukok.jpg"],["C29","Ebony","c29-abanoz","c29_abanoz.jpg"],["C31","Walnut","c31-ceviz","c31_ceviz.jpg"],["C37","Zebrano","c37-zebrano","c37_zebrano.jpg"],["C39","Crown Rosewood","c39-hareli-peleseng","c39_harelipeleseng.jpg"],["C41","Walnut","c41-ceviz","c41_ceviz.jpg"],["C43","Fraise Rosewood","c43-freze-peleseneg","c43_frezepeleseng.jpg"],["C43-T","Teak","c43-teak","c43_teak.jpg"],["C44","Alaca","c44-alaca","c44_alaca.jpg"],["C45","Crown Rosewood","c45-hareli-peleseng","c45_harelipeleseng.jpg"],["C48","Burl","c48-kok","c48_kok.jpg"],["C51","Burl","c51-kok","c51_kok.jpg"],["C53","Burl","c53-kok","c53_kok.jpg"],["C54","Burl","c54-kok","c54_kok.jpg"],["C55","Burl","c55-kok","c55_kok.jpg"],["C58","Walnut","c58-ceviz","c58_ceviz.jpg"],["NEW","New Ebony","new-ebony","newebony.jpg"],["BELI","Artificial Beli","yapay-beli","yapaybeli.jpg"],["ZIR","Artificial Ziricota","yapay-ziricota","yapayziricota.jpg"]
+  ["CLS-01","İnce Freze Meşe","Thin Rift Oak","cls-01-ince-freze-mese"],
+  ["CLS-02","Kalın Freze Meşe","Thick Rift Oak","cls-02-kalin-freze-mese"],
+  ["CLS-03","Hareli Meşe","Crown Oak","cls-03-hareli-mese"],
+  ["CLS-04","Kireçli Freze Meşe","Limed Rift Oak","cls-04-kirecli-freze-mese"],
+  ["CLS-05","Kireçli Hareli Meşe","Limed Crown Oak","cls-05-kirecli-hareli-mese"],
+  ["CLS-06","Tütsülü Meşe","Smoked Oak","cls-06-tutsulu-mese"],
+  ["CLS-07","Açık Freze Ceviz","Light Rift Walnut","cls-07-acik-freze-ceviz"],
+  ["CLS-08","Freze Ceviz","Rift Walnut","cls-08-freze-ceviz"],
+  ["CLS-09","Hareli Ceviz","Crown Walnut","cls-09-hareli-ceviz"],
+  ["CLS-10","Sütlü Kahve Ceviz","Milk Coffee Walnut","cls-10-sutlu-kahve-ceviz"],
+  ["CLS-11","Special Ceviz","Special Walnut","cls-11-special-ceviz"],
+  ["CLS-12","Hareli Teak","Crown Teak","cls-12-hareli-teak"],
+  ["CLS-13","Freze Teak","Rift Teak","cls-13-freze-teak"],
+  ["CLS-14","Hareli Pelesenk","Crown Rosewood","cls-14-hareli-pelesenk"],
+  ["CLS-15","Freze Pelesenk","Rift Rosewood","cls-15-freze-pelesenk"],
+  ["CLS-16","Wenge","Wenge","cls-16-wenge"],
+  ["CLS-17","Siyah","Black","cls-17-siyah"],
+  ["CLS-18","Gri","Grey","cls-18-gri"],
+  ["CLS-19","Gri Hareli","Grey Crown","cls-19-gri-hareli"],
+  ["CLS-20","Gri Kireçli Freze","Grey Limed Rift","cls-20-gri-kirecli-freze"],
+  ["CLS-21","Siyah Freze","Black Rift","cls-21-siyah-freze"],
+  ["CLS-22","Siyah Hareli","Black Crown","cls-22-siyah-hareli"],
+  ["CLS-23","Mavi Hareli","Blue Crown","cls-23-mavi-hareli"],
+  ["CLS-24","Herringbone","Herringbone","cls-24-herringbone"],
+  ["CLS-25","Gri Kök","Grey Burl","cls-25-gri-kok"],
+  ["CLS-26","Beyaz Abanoz","White Ebony","cls-26-beyaz-abanoz"],
+  ["CLS-27","Purple","Purple","cls-27-purple"],
+  ["CLS-28","Extra Freze Meşe","Extra Rift Oak","cls-28-extra-freze-mese"],
+  ["CLS-29","Dumanlı Hareli Meşe","Smoked Crown Oak","cls-29-dumanli-hareli-mese"],
+  ["CLS-30","Teak","Teak","cls-30-teak"],
+  ["CLS-31","Kök","Burl","cls-31-kok"],
+  ["CLS-32","Kök","Burl","cls-32-kok"],
+  ["CLS-33","Kök","Burl","cls-33-kok"],
+  ["CLS-34","CLS-34","CLS-34","cls-34"],
+  ["CLS-35","CLS-35","CLS-35","cls-35"],
+  ["CLS-36","CLS-36","CLS-36","cls-36"],
+  ["CLS-37","Meşe Yarım Hare","Half Crown Oak","cls-37-mese-yarim-hare"],
+  ["CLS-38","Gri Yarım Hare","Grey Half Crown","cls-38-gri-yarim-hare"],
+  ["CLS-39","Füme Meşe","Smoked Oak","cls-39-fume-mese"],
+  ["CLS-40","Extra Hareli Meşe","Extra Crown Oak","cls-40-extra-hareli-mese"]
 ] as const;
 
-const visualizationProducts = new Set(["akcaagac", "usa-ceviz", "wengue", "a1-ince-dar-mese", "a11-wenge"]);
+const visualizationProducts = new Set(["akcaagac", "usa-ceviz", "wengue"]);
 
 const naturalOfficeApplications: Record<string, string> = {
   afromosia: "afromosia-room.jpg",
@@ -54,6 +93,8 @@ const naturalOfficeApplications: Record<string, string> = {
 
 function materialAssets(category: "natural" | "industrial", slug: string, sourceImage: string) {
   const root = `/materials/${category}/${slug}`;
+  const catalogue = `${root}/${category === "industrial" ? "catalog.jpg" : "catalog.webp"}`;
+  const thumbnail = category === "industrial" ? catalogue : `${root}/thumbnail.webp`;
   const isPoc = visualizationProducts.has(slug);
   const naturalOfficeFile = category === "natural" ? naturalOfficeApplications[slug] : undefined;
   const application = naturalOfficeFile
@@ -62,11 +103,11 @@ function materialAssets(category: "natural" | "industrial", slug: string, source
       ? `/images/applications/master-room-v2/${slug}-room.webp`
       : undefined;
   return {
-    image: `${root}/catalog.webp`,
+    image: catalogue,
     images: {
-      source: `/images/products/${sourceImage}`,
-      thumbnail: `${root}/thumbnail.webp`,
-      catalogue: `${root}/catalog.webp`,
+      source: category === "industrial" ? catalogue : `/images/products/${sourceImage}`,
+      thumbnail,
+      catalogue,
       enhanced: isPoc ? `${root}/enhanced.webp` : undefined,
       macro: isPoc ? `${root}/macro.webp` : undefined,
       application,
@@ -88,10 +129,10 @@ function surface(row: readonly [string,string,string], subtype: ProductSubtype):
 export const products: Product[] = [
   ...naturalRows.map((row) => surface(row, "natural")),
   ...exoticRows.map((row) => surface(row, "exotic")),
-  ...industrialRows.map(([code, name, slug, image]) => ({ id: `industrial-veneer-${slug}`, slug, code, name: { tr: trNames[name] ?? name, en: name }, category: "industrial-veneer" as const, ...materialAssets("industrial", slug, image), sourceUrl: `${source}/${slug}/` }))
+  ...industrialRows.map(([code, trName, enName, slug]) => ({ id: `industrial-veneer-${slug}`, slug, code, name: { tr: trName, en: enName }, category: "industrial-veneer" as const, ...materialAssets("industrial", slug, "catalog.jpg"), sourceUrl: `${source}/${slug}/` }))
 ];
 
-export const featuredProducts = ["usa-ceviz", "fume-mese", "dogal-teak", "a11-wenge", "a4-teak", "zebrano"]
+export const featuredProducts = ["usa-ceviz", "fume-mese", "dogal-teak", "cls-16-wenge", "cls-30-teak", "zebrano"]
   .map((slug) => products.find((product) => product.slug === slug))
   .filter((product): product is Product => Boolean(product));
 
