@@ -91,14 +91,64 @@ const naturalOfficeApplications: Record<string, string> = {
   zebrano: "zebrano-room.jpg",
 };
 
+const industrialOfficeApplications = new Set([
+  "cls-01-ince-freze-mese",
+  "cls-02-kalin-freze-mese",
+  "cls-03-hareli-mese",
+  "cls-04-kirecli-freze-mese",
+  "cls-05-kirecli-hareli-mese",
+  "cls-06-tutsulu-mese",
+  "cls-07-acik-freze-ceviz",
+  "cls-08-freze-ceviz",
+  "cls-09-hareli-ceviz",
+  "cls-10-sutlu-kahve-ceviz",
+  "cls-11-special-ceviz",
+  "cls-12-hareli-teak",
+  "cls-13-freze-teak",
+  "cls-14-hareli-pelesenk",
+  "cls-15-freze-pelesenk",
+  "cls-16-wenge",
+  "cls-17-siyah",
+  "cls-18-gri",
+  "cls-19-gri-hareli",
+  "cls-20-gri-kirecli-freze",
+  "cls-21-siyah-freze",
+  "cls-22-siyah-hareli",
+  "cls-23-mavi-hareli",
+  "cls-24-herringbone",
+  "cls-25-gri-kok",
+  "cls-26-beyaz-abanoz",
+  "cls-27-purple",
+  "cls-28-extra-freze-mese",
+  "cls-29-dumanli-hareli-mese",
+  "cls-30-teak",
+  "cls-31-kok",
+  "cls-32-kok",
+  "cls-33-kok",
+  "cls-35",
+  "cls-36",
+  "cls-37-mese-yarim-hare",
+  "cls-38-gri-yarim-hare",
+  "cls-39-fume-mese",
+  "cls-40-extra-hareli-mese",
+]);
+
 function materialAssets(category: "natural" | "industrial", slug: string, sourceImage: string) {
   const root = `/materials/${category}/${slug}`;
   const catalogue = `${root}/${category === "industrial" ? "catalog.jpg" : "catalog.webp"}`;
   const thumbnail = category === "industrial" ? catalogue : `${root}/thumbnail.webp`;
   const isPoc = visualizationProducts.has(slug);
   const naturalOfficeFile = category === "natural" ? naturalOfficeApplications[slug] : undefined;
-  const application = naturalOfficeFile
+  const industrialOfficeFile = category === "industrial" && industrialOfficeApplications.has(slug)
+    ? `${slug}-office.webp`
+    : undefined;
+  const approvedOfficePath = naturalOfficeFile
     ? `/images/applications/natural-office-v1/${naturalOfficeFile}`
+    : industrialOfficeFile
+      ? `/images/applications/industrial-office-v1/${industrialOfficeFile}`
+      : undefined;
+  const application = approvedOfficePath
+    ? approvedOfficePath
     : isPoc
       ? `/images/applications/master-room-v2/${slug}-room.webp`
       : undefined;
@@ -113,10 +163,16 @@ function materialAssets(category: "natural" | "industrial", slug: string, source
       application,
     },
     visualization: {
-      scene: naturalOfficeFile ? "natural-office-v1" as const : isPoc ? "master-room-v2" as const : "master-room-v1" as const,
+      scene: naturalOfficeFile
+        ? "natural-office-v1" as const
+        : industrialOfficeFile
+          ? "industrial-office-v1" as const
+          : isPoc
+            ? "master-room-v2" as const
+            : "master-room-v1" as const,
       image: application,
-      status: naturalOfficeFile ? "approved" as const : application ? "review" as const : "pending" as const,
-      colorQa: application && !naturalOfficeFile ? "PASS" as const : undefined,
+      status: approvedOfficePath ? "approved" as const : application ? "review" as const : "pending" as const,
+      colorQa: application && !approvedOfficePath ? "PASS" as const : undefined,
     },
   };
 }
